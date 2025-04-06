@@ -31,7 +31,7 @@ export const addWithReducerV2 = () => {
        { name: "C", age: 1, mentalAge: 100, activeStatus: true },
        { name: "D", age: 100, mentalAge: 100, activeStatus: true },
        { name: "E", age: -10, mentalAge: -50, activeStatus: false },
-       { name: "F", age: 100, mentalAge: -500, activeStatus: false }
+       { name: "F", age: 100, mentalAge: -500, activeStatus: false } 
     ];
  
     const resultAge = arr.reduce((x, y) => y.activeStatus ? x + y.age : x, 0);
