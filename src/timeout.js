@@ -6,13 +6,15 @@ export const timeout = () => {
 const sub = () => {
     console.log("1st");
     console.log("2nd");
-    setTimeout(() => { //EventLoop 
+    const timeout1 = setTimeout(() => { //EventLoop 
         console.log("3rd")
         console.log("4th");
+        clearTimeout(timeout1);
     }, 3000);
-    setTimeout(() => { //EventLoop 
+    const timeout2 = setTimeout(() => { //EventLoop 
         console.log("7th")
         console.log("8th");
+        clearTimeout(timeout2);
     },2999);
     console.log("5th");
     console.log("6th");
@@ -22,7 +24,13 @@ const sub = () => {
 
 //Set Interval
 export const interval = () => {
-    
+    let num = 1
+    const int = setInterval(() => {
+        if(num === 5)
+            clearInterval(int);
+        console.log(Math.random());
+        num++
+    },3000)
 }
 
 

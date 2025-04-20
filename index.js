@@ -13,6 +13,7 @@ const main = () => {
     //objectDestructure();
     //arrDestructuring();
     timeout();
+    //interval();
 }
 
 main(); //Anonymus Function or Fat arrow function;
